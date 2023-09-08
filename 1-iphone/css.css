@@ -1,0 +1,265 @@
+/* Desenhando um iphone com HTML e CSS */
+
+* {
+  margin: 0;
+  color: white;
+}
+
+img {
+  height: 150px;
+}
+
+#screen {
+  height: 100vh; 
+  background-color: white;
+  
+  display: flex; /* juntos estica a div para o máximo possível */
+  flex-direction: column; /* juntos estica a div para o máximo possível */
+}
+
+#iphone-div {
+  background-color: black;
+  flex-grow: 1; /* juntos estica a div para o máximo possível */
+  
+  margin-top: -4px; /* gruda o topo da div com a base da imagem*/
+  
+  display: grid;
+  place-items: center;
+}
+
+#iphone-view {
+  height: 350px;
+  display: flex;
+}
+
+/* Início da estilização da parte de trazeira do iphone*/
+#back {
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  background: 
+  linear-gradient(45deg, #2c3e50 20%, #34495e 50%, #2c3e50 80%),
+  linear-gradient(45deg, #bdc3c7 20%, #ecf0f1 50%, #bdc3c7 80%);
+  background-blend-mode: overlay;
+  
+  height: 80%;
+  margin-top: 35px;
+  width: 180px;
+  
+  border-radius: 20px 23px 0px 15px;
+  transform: rotateX(-18deg) rotateY(35deg);
+  
+  padding: 7px 0px 2px 20px;
+  
+  position: relative;
+}
+
+#back-case {
+  background: 
+  linear-gradient(45deg, #2c3e50 20%, #34495e 50%, #2c3e50 80%),
+  linear-gradient(45deg, #bdc3c7 20%, #ecf0f1 50%, #bdc3c7 80%);
+  background-blend-mode: overlay;
+  
+  border-left: 2.3px solid #414a51;
+  border-top: 2.3px solid #414a51;
+  border-right: 2.3px solid #414a51;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+#back-cameras {
+  background-color: darkgray;
+  height: 135px;
+  width: 95px;
+  margin-left: 6px;
+  margin-top: 6px;
+  border-radius: 25px;
+  border: 1px solid black;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* columns */
+  grid-template-rows: 28px 28px; /* rows */
+  grid-gap: 15px 0px; /* row column */
+  
+  place-content: center;
+  place-items: center;
+}
+
+.camera-upper-detail {
+  border-left: 4px solid black;
+  background-color: #fbc398;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.camera-inner-detail {
+  border: 7px solid black;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.camera {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%; 
+  background-color: #263e68;
+  border: 7px solid #303030;
+}
+
+#logo {
+  height: 100%;
+  /*ou usar flex-grow: 1;*/
+  background-color: none;
+  
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+   height: 55px;
+}
+
+/* Estilizando os botões */
+
+#flash-area {
+  height: 17px;
+  width: 17px;
+  background-color: lightgray;
+  border-radius: 50%;
+  
+  position: absolute;
+  
+  margin: 43px 0px 0px 45px;
+  border-left: 2px solid black;
+ 
+  display: grid; 
+  place-items: center;
+}
+
+#flash {
+  background-color: #494340;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  border-right: 1px solid black;
+  border-left: 1px solid lightgray;
+}
+
+#on-off-button {
+  background-color: #85A3B2;
+  height: 45px;
+  
+  width: 9px;
+  margin-left: -16px;
+  margin-top: -170px;
+  
+  border-radius: 5px;
+  
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+
+/* inicio da estilização da parte da frente do iphone */
+
+#front {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid #bdbdbd;
+  background: 
+  linear-gradient(45deg, #2c3e50 20%, #34495e 50%, #2c3e50 80%),
+  linear-gradient(45deg, #bdc3c7 20%, #ecf0f1 50%, #bdc3c7 80%);
+  background-blend-mode: overlay;
+  
+  height: 80%;
+  margin-top: 35px;
+  width: 180px;
+  
+  border-radius: 20px 23px 0px 15px;
+  transform: rotateX(-18deg) rotateY(35deg);
+  
+  padding: 7px 0px 2px 20px;
+  
+  margin-left: -90px;
+  margin-top: 49px;
+}
+
+#front-screen {
+  background-color: white;
+  
+  border-left: 2.3px solid black;
+  border-top: 2.3px solid black;
+  border-right: 2.3px solid black;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+#sensor {
+  background-color: black;
+  height: 14px;
+  width: 43px;
+  margin: 0 auto;
+  margin-top: 6px;
+  border-radius: 25px;
+  
+  display: grid;
+  align-items: center;
+  justify-content: end;
+}
+
+#camera {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%; 
+  background-color: #263e68;
+  
+  margin-right: 5px;
+}
+
+/* Estilizando os botões */
+
+#charge-button {
+  background-color: #151515;
+  height: 24px;
+  
+  width: 9px;
+  margin-left: -15px;
+  margin-top: -205px;
+  
+  border-radius: 5px 5px 5px 5px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  
+  overflow: hidden; 
+}
+
+#increase-volume-button {
+  background-color: #85A3B2;
+  height: 35px;
+  
+  width: 9px;
+  margin-left: -16px;
+  margin-top: 14px;
+  
+  border-radius: 5px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#decrease-volume-button {
+  background-color: #85A3B2;
+  height: 35px;
+  
+  width: 9px;
+  margin-left: -16px;
+  margin-top: 5px;
+  
+  border-radius: 5px;
+  
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
